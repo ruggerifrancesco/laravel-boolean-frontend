@@ -1,13 +1,13 @@
 <template>
-    <div>
+    <nav
         Header
-    </div>
+    </nav>
 </template>
 <script>
 export default {
     name: 'AppHeader'
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     
 </style>
