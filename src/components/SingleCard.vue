@@ -38,7 +38,7 @@ export default {
     img{
         width: 100%;
         object-fit: cover;
-        height: 300px;
+        height: 400px;
         justify-content: center;
         border-radius: 10px;
     }
