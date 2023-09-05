@@ -82,6 +82,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-8">
                             <div class="contact-wrap">
                                 <h3 class="mb-4 text-center">Get in touch with us</h3>
@@ -89,6 +90,7 @@
                                 <div id="form-message-success" class="mb-4 w-100 text-center">
                                     Type here your message, and we'll reply to you as soon as we can!
                                 </div>
+
                                 <form method="POST" id="contactForm" name="contactForm" class="contactForm">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -122,7 +124,17 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Do you want to subscribe to our newsletter as well?
+                                        </label>
+                                    </div>
+
                                 </form>
+
                             </div>
                         </div>
                     </div>
@@ -130,7 +142,6 @@
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
@@ -311,5 +322,4 @@ const elements = [
         }
     }
 }
-
 </style>
