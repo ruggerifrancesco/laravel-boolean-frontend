@@ -9,17 +9,51 @@
             <h1>
                 Our Cocktails
             </h1>
-            <div class="card-wrapper">
-
+            <div class="cocktails">
+                <SingleCard class="cocktail-card" v-for="cocktail in cocktails" :cocktail='cocktail'  />
             </div>
         </div>
     </div>
 </template>
 <script>
 import axios from 'axios';
+import SingleCard from '../components/SingleCard.vue'
 
 export default {
-    name: 'Homepage'
+    name: 'Homepage', 
+
+    components:{
+        SingleCard
+    },
+
+    data() {
+        return {
+            cocktails: [],
+            apiUrl: 'http://127.0.0.1:8000/api/cocktails'
+        };
+    },
+
+    methods: {
+        
+        getCocktails() {
+            axios.get(this.apiUrl, {
+                params: {}
+            })
+                .then((response) => {
+                console.log(response.data.results);
+                this.posts = response.data.results;
+            })
+                .catch(function (error) {
+                console.log(error);
+            })
+                .finally(function () {
+            });
+        }
+    },
+
+    created() {
+        this.getCocktails();
+    },
     
 }
 </script>
@@ -59,7 +93,7 @@ export default {
 
             }
 
-            .card-wrapper{
+            .cocktails{
                 width: 80%;
                 display: flex;
                 flex-wrap: wrap;
