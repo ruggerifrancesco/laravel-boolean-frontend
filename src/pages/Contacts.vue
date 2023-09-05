@@ -9,60 +9,133 @@
         <!-- Navbar Buttons -->
         <nav>
             <ul>
-                <div v-for="navElement in navElements" class="contact-nav-button">
+                <div v-for="element in elements" class="contact-nav-button">
                     <li>
-                        <a :href="contact.link">{{ contact.name }}</a>
+                        <a :href="element.link">{{ element.name }}</a>
                     </li>
                 </div>
             </ul>
         </nav>
 
-        <!-- Get In Touch Section -->
-        <div class="whole-rectangle">
-            <div class="side left-side">
-                <div class="text-area">
-                    <h2>Let's get in touch!</h2>
+        <div class="side right-side">
+            <div class="picture-wrapper">
 
-                    <div class="text-square">
-                        <h4 class="title-get-in-touch">Physical Store:</h4>
-                        <p><i class="fa-solid fa-location-dot"></i> 1885 Marcus Street, Scottsboro, AL 35768, United States
-                        </p>
-                        <p><i class="fa-solid fa-phone"></i> +1 256-999-1335 to schedule a pick-up time for your orders!</p>
-                    </div>
+            </div>
+        </div>
+    </div>
 
-                    <div class="text-square">
-                        <h4>Support/Invoice/Contact</h4>
-                        <p>contact@cocktailclub.com</p>
+    <!-- Contact Form on Website -->
+    <div class="contact-form">
+        <div class="">
+            <h2>Contact us directly on the website! </h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+                <div class="wrapper">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 mb-5">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-map-marker"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-phone"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-paper-plane"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="contact-wrap">
+                                <h3 class="mb-4 text-center">Get in touch with us</h3>
+                                <div id="form-message-warning" class="mb-4 w-100 text-center"></div>
+                                <div id="form-message-success" class="mb-4 w-100 text-center">
+                                    Your message was sent, thank you!
+                                </div>
+                                <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="name" id="name"
+                                                    placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="email" id="email"
+                                                    placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="subject" id="subject"
+                                                    placeholder="Subject">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea name="message" class="form-control" id="message" cols="30"
+                                                    rows="8" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="Send Message" class="btn btn-primary">
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="side right-side">
-                <div class="picture-wrapper">
-
-                </div>
-            </div>
         </div>
+    </div>
 
-        <!-- Sign Up to Newsletter -->
-        <div class="newsletter-sign-up-container">
-            <h1>Subscribe to our newsletter to stay updated on the latest cocktails!</h1>
-            <form class="newsletter">
-                <span class="container active">
-                    <label for="name">What's your name?</label>
-                    <input type="text" id="name" name="name" class="required" />
-                    <span class="next" title="next"></span>
-                </span>
-                <span class="container">
-                    <label for="email">What's your email?</label>
-                    <input class="required" type="email" id="email" name="email" />
-                </span>
-                <span class="submit" title="Subscribe"></span>
-            </form>
+    <!-- Sign Up to Newsletter -->
+    <div class="newsletter-sign-up-container">
+        <h1>Subscribe to our newsletter to stay updated on the latest cocktails!</h1>
+        <form class="newsletter">
+            <span class="container active">
+                <label for="name">What's your name?</label>
+                <input type="text" id="name" name="name" class="required" />
+                <span class="next" title="next"></span>
+            </span>
+            <span class="container">
+                <label for="email">What's your email?</label>
+                <input class="required" type="email" id="email" name="email" />
+            </span>
+            <span class="submit" title="Subscribe"></span>
+        </form>
 
-            <div class="reset">Reset the Form</div>
-        </div>
-
+        <div class="reset">Reset the Form</div>
     </div>
 </template>
 
@@ -70,7 +143,7 @@
 export default {
 }
 
-const navElements = [
+const elements = [
     {
         name: "Contact",
         link: "/contact",
@@ -101,84 +174,6 @@ const navElements = [
     },
 
 ]
-
-$('.next').click(function () {
-    var nextTarget = $(this).parent().siblings('span');
-    var currentTarget = $(this).parent();
-    currentTarget.removeClass('active');
-    nextTarget.addClass('active').find('input').focus();
-});
-
-$('input#email').on('keydown', function (e) {
-    var keyCode = e.keyCode || e.which;
-    if (keyCode == 13) {
-        $('.submit').trigger('click');
-    }
-})
-
-$('.submit').click(function () {
-    var target = $(this);
-    var lastInputContainerLabel = target.parent().find('.container.active label');
-    target.addClass('submitted');
-    lastInputContainerLabel.addClass('fadeOut');
-})
-
-
-
-// capture tab press
-$(".container").on('keydown', 'input', function (e) {
-    var keyCode = e.keyCode || e.which;
-
-    if (keyCode == 9) {
-        e.preventDefault();
-        //tabbing backwards
-        if (e.shiftKey) {
-            var currentInput = $(this);
-            var prevInput = currentInput.parent().prev('.container').find('input');
-            var currentContainer = currentInput.parent();
-            var prevContainer = currentInput.parent().prev('.container');
-            if (currentContainer.is(':first-of-type')) {
-                // do nothing if is first input
-            } else {
-                currentContainer.removeClass('active');
-                prevContainer.addClass('active');
-                prevInput.focus();
-            }
-            //tabbing forwards
-        } else {
-            var currentInput = $(this);
-            var nextInput = currentInput.parent().next('.container').find('input');
-            var currentContainer = currentInput.parent();
-            var nextContainer = currentInput.parent().next('.container');
-            if (currentContainer.is(':nth-last-of-type(2)')) {
-                // do nothing if is last input
-            } else {
-                currentContainer.removeClass('active');
-                nextContainer.addClass('active');
-                nextInput.focus();
-            }
-        }
-    }
-});
-
-// validate the form
-$('.newsletter').validate({
-    errorElement: "span"
-});
-
-
-// reset the form
-$('.reset').click(function () {
-    var target = $('form.newsletter');
-    var targetInput = target.find('span.container > input');
-    var inputContainer = target.find('span');
-    var firstContainer = target.find('span.container:first-of-type');
-    targetInput.val('');
-    inputContainer.removeClass('active');
-    firstContainer.addClass('active');
-    $('span.submit').removeClass('submitted');
-    $('label').removeClass('fadeOut')
-});
 </script>
 
 <style lang="scss">
