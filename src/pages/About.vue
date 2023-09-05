@@ -40,7 +40,7 @@ export default {
             teamMembers: [
                 'Simone Scoca',
                 'Liza Koizumi',
-                'Juan Francisco Martinez',
+                'Juan Francisco Markan',
                 'Francesco Ruggeri',
                 'Mohamed Jebali',
                 'Matteo Didone'
