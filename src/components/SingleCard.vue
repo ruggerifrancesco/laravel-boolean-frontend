@@ -21,14 +21,26 @@ export default {
 <style lang="scss">
     
 @use '../styles/partials/variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 .drink-card{
-    background-color: $header-footer;
+    background-color: #010514;
     color: white;
     padding: 15px;
+    margin: 10px;
     border-radius: 10px;
     width: calc( (100% / 3) - 20px );
-    height: 200px;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    //display: flex;
+
+    img{
+        width: 100%;
+        object-fit: cover;
+        //max-height: 100%;
+        justify-content: center;
+        border-radius: 10px;
+    }
 
     *{
         margin-bottom: 10px;
@@ -36,7 +48,12 @@ export default {
 
     &:hover{
         cursor: pointer;
-        background-color: rgba(35, 47, 99, 0.767);
+        background-color: rgba(2, 5, 22, 0.92);
+    }
+
+    h2{
+        display: block;
+        text-align: center;
     }
 
 }

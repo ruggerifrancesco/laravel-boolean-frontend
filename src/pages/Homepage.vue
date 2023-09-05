@@ -41,7 +41,7 @@ export default {
             })
                 .then((response) => {
                 console.log(response.data.results);
-                this.posts = response.data.results;
+                this.cocktails = response.data.results;
             })
                 .catch(function (error) {
                 console.log(error);
@@ -94,6 +94,7 @@ export default {
             }
 
             .cocktails{
+                margin: 0 auto;
                 width: 80%;
                 display: flex;
                 flex-wrap: wrap;
