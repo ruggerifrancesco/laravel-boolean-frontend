@@ -37,7 +37,7 @@ export default {
     img{
         width: 100%;
         object-fit: cover;
-        //max-height: 100%;
+        height: 300px;
         justify-content: center;
         border-radius: 10px;
     }

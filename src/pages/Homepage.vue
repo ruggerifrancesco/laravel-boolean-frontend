@@ -85,6 +85,7 @@ export default {
 
         .main{
             background-color: $background-color;
+            padding-bottom: 70px;
 
             h1{
                 color: $text;
