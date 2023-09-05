@@ -10,31 +10,27 @@ import SingleCard from '../components/SingleCard.vue'
 
 export default {
     name: 'CocktailShow',
-
     components:{
         SingleCard
     },
 
     data() {
         return {
-            
             apiUrl: 'http://127.0.0.1:8000',
-            cocktail : false
+            cocktail : false,
         }
     },
     methods: {
-            getCocktail(){
-                console.log(this.$route.params.id);
-                axios.get(`${this.apiUrl}/api/cocktails/${this.$route.params.id}`).then((response) => {
-                    console.log(response);
-                    this.cocktail = response.data.result;
-                }).catch(function (error) {
-                    console.log(error);
-                });
-            }
-        },
-    
-
+        getCocktail(){
+            console.log(this.$route.params.slug);
+            axios.get(`${this.apiUrl}/api/cocktails/${this.$route.params.slug}`).then((response) => {
+                console.log(response);
+                this.cocktail = response.data.results;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+    },
     created(){
         this.getCocktail();
     },

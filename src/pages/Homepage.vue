@@ -32,14 +32,15 @@ export default {
     },
 
     methods: {
-        
         getCocktails() {
-            axios.get(this.apiUrl, {
-                params: {}
-            })
+            const params = {}
+
+            // console.log(params);
+
+            axios.get(this.apiUrl, { params })
                 .then((response) => {
-                console.log(response.data.results);
-                this.cocktails = response.data.results;
+                console.log(response.data.results.data);
+                this.cocktails = response.data.results.data;
             })
                 .catch(function (error) {
                 console.log(error);
