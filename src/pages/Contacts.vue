@@ -141,7 +141,13 @@
 
 <script>
 export default {
-}
+    components: {},
+    data() {
+        return {
+            elements,
+        };
+    },
+};
 
 const elements = [
     {
