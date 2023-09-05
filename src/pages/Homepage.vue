@@ -1,23 +1,21 @@
 <template>
-    <div>
-        <div class="jumbotron">
-            <h1>
-                Welcome to the Cocktail Club
-            </h1>
-        </div>
-        <div class="main">
-            <h1>
-                Our Cocktails
-            </h1>
-            <div class="cocktails">
-                <SingleCard class="cocktail-card" v-for="cocktail in cocktails" :cocktail='cocktail'  />
-            </div>
-        </div>
+    <div class="jumbotron">
+        <h1>
+            Welcome to the Cocktail Club
+        </h1>
     </div>
+    <section class="cocktails-index">
+        <h1>
+            Our Cocktails
+        </h1>
+        <div class="cocktails">
+            <SingleCard class="cocktail-card" v-for="cocktail in cocktails" :cocktail='cocktail'  />
+        </div>
+    </section>
 </template>
 <script>
 import axios from 'axios';
-import SingleCard from '../components/SingleCard.vue'
+import SingleCard from '../components/SingleCard.vue';
 
 export default {
     name: 'Homepage', 
@@ -80,7 +78,7 @@ export default {
             }
         }
 
-        .main{
+        .cocktails-index{
             background-color: $background-color;
             padding-bottom: 70px;
 
@@ -98,8 +96,4 @@ export default {
                 flex-wrap: wrap;
             }
         }
-    
-
-    
-
 </style>
