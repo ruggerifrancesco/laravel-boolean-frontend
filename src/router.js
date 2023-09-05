@@ -29,7 +29,7 @@ const router = createRouter({
           meta: { title: 'Contacs'}
       },
       {
-          path: '/cocktail/:id',
+          path: '/cocktail/:slug',
           name : 'cocktail.show',
           component : CocktailShow,
           meta: { title: 'Cocktail Details'}

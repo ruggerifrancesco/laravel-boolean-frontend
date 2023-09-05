@@ -4,7 +4,7 @@
             <img :src="cocktail.image" alt="">
         </div>
         <h2>
-            <router-link :to="{name: 'cocktail.show', params: {id:cocktail.id}}" >
+            <router-link :to="{name: 'cocktail.show', params: {slug:cocktail.slug}}" >
                 {{ cocktail.name }}
             </router-link>
         </h2>
@@ -16,8 +16,7 @@ export default {
     name: 'SingleCard',
     props:{
         'cocktail' : Object
-    }
-    
+    },
 }
 </script>
 <style lang="scss">
