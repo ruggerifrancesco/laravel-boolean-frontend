@@ -1,30 +1,53 @@
 <template>
-    <div class="drink-card">
-        <div class="img-wrapper">
-            <img :src="cocktail.image" alt="">
-        </div>
-        <h2>
-            <router-link :to="{name: 'cocktail.show', params: {id:cocktail.id}}" >
-                {{ cocktail.name }}
-            </router-link>
-        </h2>
+    <div>
+        <SingleCard v-if="cocktail" class="drink-card" :cocktail='cocktail' />
     </div>
 </template>
+
 <script>
+import axios from 'axios';
+import SingleCard from '../components/SingleCard.vue'
 
 export default {
-    name: 'SingleCard',
-    props:{
-        'cocktail' : Object
-    }
+    name: 'CocktailShow',
+
+    components:{
+        SingleCard
+    },
+
+    data() {
+        return {
+            
+            apiUrl: 'http://127.0.0.1:8000',
+            cocktail : false
+        }
+    },
+    methods: {
+            getCocktail(){
+                console.log(this.$route.params.id);
+                axios.get(`${this.apiUrl}/api/cocktails/${this.$route.params.id}`).then((response) => {
+                    console.log(response);
+                    this.cocktail = response.data.result;
+                }).catch(function (error) {
+                    console.log(error);
+                });
+            }
+        },
     
+
+    created(){
+        this.getCocktail();
+    },
 }
 </script>
-<style lang="scss">
+
+
+<style lang="scss" scoped>
     
 @use '../styles/partials/variables' as *;
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
+    
 .drink-card{
     background-color: #010514;
     color: white;
@@ -59,7 +82,6 @@ export default {
 
         a{
             text-decoration: none;
-            color: white;
         }
     }
 
