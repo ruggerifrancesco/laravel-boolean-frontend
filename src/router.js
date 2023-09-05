@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 // Importing
 import Homepage from './pages/Homepage.vue';
 import About from './pages/About.vue';
-import Index from './pages/Index.vue';
+import Contacts from './pages/Contacts.vue';
 import CocktailShow from './pages/CocktailShow.vue'
 import NotFoundPage from './pages/NotFoundPage.vue';
 
@@ -25,8 +25,8 @@ const router = createRouter({
       {
           path: '/index',
           name : 'index',
-          component : Index,
-          meta: { title: 'Index'}
+          component : Contacts,
+          meta: { title: 'Contacs'}
       },
       {
           path: '/cocktail/:id',

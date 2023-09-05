@@ -1,6 +1,6 @@
 <template>
     <div>
-        Index Page
+        Contacts Page
     </div>
 </template>
 <script>
