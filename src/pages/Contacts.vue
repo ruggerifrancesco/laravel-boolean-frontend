@@ -26,9 +26,10 @@
 
     <!-- Contact Form on Website -->
     <div class="contact-form">
-        <div class="">
-            <h2>Contact us directly on the website! </h2>
+        <div class="d-flex justify-content-center align-items-center">
+            <h2>Contact us directly on the website!</h2>
         </div>
+
 
         <div class="row justify-content-center">
             <div class="col-lg-10 col-md-12">
@@ -39,18 +40,25 @@
                                 <div class="col-md-4">
                                     <div class="dbox w-100 text-center">
                                         <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-map-marker"></span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 0 384 512"><!-- Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                <path
+                                                    d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                                            </svg>
                                         </div>
                                         <div class="text">
-                                            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016
-                                            </p>
+                                            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="dbox w-100 text-center">
                                         <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-phone"></span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 0 512 512"><!--Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                <path
+                                                    d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                                            </svg>
                                         </div>
                                         <div class="text">
                                             <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
@@ -60,7 +68,11 @@
                                 <div class="col-md-4">
                                     <div class="dbox w-100 text-center">
                                         <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-paper-plane"></span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 0 512 512"><!-- Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                <path
+                                                    d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+                                            </svg>
                                         </div>
                                         <div class="text">
                                             <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a>
@@ -75,7 +87,7 @@
                                 <h3 class="mb-4 text-center">Get in touch with us</h3>
                                 <div id="form-message-warning" class="mb-4 w-100 text-center"></div>
                                 <div id="form-message-success" class="mb-4 w-100 text-center">
-                                    Your message was sent, thank you!
+                                    Type here your message, and we'll reply to you as soon as we can!
                                 </div>
                                 <form method="POST" id="contactForm" name="contactForm" class="contactForm">
                                     <div class="row">
@@ -119,24 +131,6 @@
         </div>
     </div>
 
-    <!-- Sign Up to Newsletter -->
-    <div class="newsletter-sign-up-container">
-        <h1>Subscribe to our newsletter to stay updated on the latest cocktails!</h1>
-        <form class="newsletter">
-            <span class="container active">
-                <label for="name">What's your name?</label>
-                <input type="text" id="name" name="name" class="required" />
-                <span class="next" title="next"></span>
-            </span>
-            <span class="container">
-                <label for="email">What's your email?</label>
-                <input class="required" type="email" id="email" name="email" />
-            </span>
-            <span class="submit" title="Subscribe"></span>
-        </form>
-
-        <div class="reset">Reset the Form</div>
-    </div>
 </template>
 
 <script>
@@ -183,214 +177,139 @@ const elements = [
 </script>
 
 <style lang="scss">
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-    transition: .5s ease-in-out;
-}
-
-body,
-html {
-    font-family: -apple-system, helvetica neue, helvetica, arial, sans-serif;
-    font-weight: 200;
-    position: relative;
-    height: 100%;
-}
-
-h1 {
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: 200;
-    padding: 75px 0 50px 0;
+.contact-information-navbar {
+    background-color: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 
-    .subtext {
-        opacity: .3;
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
     }
-}
 
-.newsletter {
-    max-width: 400px;
-    margin: 50px auto;
-    position: relative;
+    nav {
+        ul {
+            list-style: none;
+            padding: 0px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
 
-    >span.container {
-        display: block;
-        width: 100%;
-        position: absolute;
-        z-index: 1;
-        top: 0px;
-        left: 0px;
-        padding: 20px 10px 10px 10px;
-        opacity: 0;
-
-        &.active {
-            opacity: 1;
-            z-index: 2;
-
-            &+.submit {
-                z-index: 3;
-                top: 20px;
-                opacity: 1;
+            li {
+                margin: 20px;
             }
-        }
 
-        >label {
-            display: block;
-            position: absolute;
-            top: -5px;
-            line-height: 18px;
+            .contact-nav-button {
+                margin-bottom: 10px;
 
-            &.fadeOut {
-                opacity: 0;
-                top: 10px;
-            }
-        }
+                a {
+                    text-decoration: none;
+                    color: #333;
+                    font-weight: bold;
+                    transition: color 0.3s ease;
 
-        >input {
-            padding: 15px;
-            margin: 0;
-            width: 100%;
-            outline: none;
-            border: 1px solid #d1d1d1;
-            border-radius: 3px;
-            font-family: -apple-system, helvetica neue, helvetica, arial, sans-serif;
-            font-weight: 200;
-            font-size: 18px;
-            line-height: 18px;
-        }
-
-        .next {
-            display: block;
-            position: absolute;
-            height: 53px;
-            width: 53px;
-            top: 20px;
-            right: 10px;
-            text-align: center;
-            border-radius: 0 3px 3px 0;
-            border-top: 1px solid transparent;
-            border-right: 1px solid transparent;
-            border-bottom: 1px solid transparent;
-
-            &:hover {
-                color: #22a31b;
-                cursor: pointer;
-
-                &:before {
-                    color: #22a31b;
+                    &:hover {
+                        color: #007bff;
+                    }
                 }
             }
-
-            &:before {
-                content: '\f061';
-                font-family: FontAwesome;
-                font-size: 18px;
-                font-weight: 200;
-                line-height: 51px;
-                color: #b6b6b6;
-            }
-        }
-
-        span.error {
-            color: red;
-            position: absolute;
-            display: block;
-            width: 100%;
-            font-size: 12px;
-            line-height: 12px;
-            bottom: -10px;
         }
     }
 
-    >span.submit {
-        display: block;
-        position: absolute;
-        height: 53px;
-        width: 53px;
-        top: 20px;
-        right: 10px;
-        text-align: center;
-        opacity: 0;
-        border-radius: 0 3px 3px 0;
-        border-top: 1px solid transparent;
-        border-right: 1px solid transparent;
-        border-bottom: 1px solid transparent;
-        overflow: hidden;
-        background: #b6b6b6;
+    .right-side {
+        margin-top: 20px;
+    }
 
-        &:hover {
-            background: #22a31b;
-            border-top: 1px solid #158010;
-            border-right: 1px solid #158010;
-            border-bottom: 1px solid #158010;
-            cursor: pointer;
+    .picture-wrapper {}
+}
 
-            &:before {
-                color: white;
-            }
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .dbox {
+        .icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        &:before {
-            content: '\f1d8';
-            font-family: FontAwesome;
-            font-size: 18px;
-            font-weight: 200;
-            line-height: 51px;
-            color: white;
+        p {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
         }
 
-        &:after {
-            content: "You're subscribed!";
-            display: block;
-            color: white;
-            font-weight: 400;
-            text-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
-            height: 100%;
-            width: 100%;
-            line-height: 51px;
-            position: absolute;
-            top: 10px;
-            opacity: 0;
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    }
+
+    .contact-wrap {
+        .mb-4 {
+            font-size: 16px;
         }
 
-        &.submitted {
-            transition: .75s cubic-bezier(0.19, 1, 0.22, 1);
-            width: calc(100% - 20px);
-            background: #22a31b;
-            border: 1px solid #158010;
-            cursor: pointer;
-            border-radius: 3px;
+        .w-100 {
+            text-align: center;
+            font-size: 14px;
+        }
 
-            &:before {
-                color: white;
-                position: relative;
-                top: -50px;
-                right: -100px;
-                transition: .25s .75s ease-in-out;
-            }
+        form {
+            .form-group {
+                margin-bottom: 15px;
 
-            &:after {
-                top: 0;
-                opacity: 1;
-                color: white;
-                transition: .5s 1s ease-in-out;
+                input[type="text"],
+                input[type="email"],
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    font-size: 14px;
+
+                    &:focus {
+                        outline: none;
+                        border-color: #007bff;
+                    }
+                }
+
+                input[type="submit"] {
+                    background-color: #007bff;
+                    color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #0056b3;
+                    }
+                }
+
+                .submitting {
+                    font-size: 14px;
+                    color: #777;
+                }
             }
         }
     }
 }
 
-.reset {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 25px;
-    cursor: pointer;
-    color: #747474;
-
-    &:hover {
-        color: red;
-    }
-}
 </style>
