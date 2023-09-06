@@ -188,8 +188,10 @@ const elements = [
 </script>
 
 <style lang="scss">
+@import "../styles/partials/variables.scss";
+
 .contact-information-navbar {
-    background-color: #f5f5f5;
+    background-color: $background-color;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -223,7 +225,7 @@ const elements = [
                     transition: color 0.3s ease;
 
                     &:hover {
-                        color: #007bff;
+                        color: $text;
                     }
                 }
             }
@@ -238,7 +240,7 @@ const elements = [
 }
 
 .contact-form {
-    background-color: #fff;
+    background-color: $background-color;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -265,7 +267,7 @@ const elements = [
         }
 
         a {
-            color: #007bff;
+            color: $text;
             text-decoration: none;
         }
     }
@@ -295,12 +297,12 @@ const elements = [
 
                     &:focus {
                         outline: none;
-                        border-color: #007bff;
+                        border-color: $button;
                     }
                 }
 
                 input[type="submit"] {
-                    background-color: #007bff;
+                    background-color: $button;
                     color: #fff;
                     border: none;
                     border-radius: 5px;
@@ -310,14 +312,18 @@ const elements = [
                     transition: background-color 0.3s ease;
 
                     &:hover {
-                        background-color: #0056b3;
+                        background-color: $button;
                     }
                 }
 
                 .submitting {
                     font-size: 14px;
-                    color: #777;
+                    color: $text;
                 }
+            }
+
+            .form-check-input:checked {
+                background-color: $button;
             }
         }
     }
