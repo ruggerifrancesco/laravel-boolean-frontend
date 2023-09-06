@@ -28,37 +28,37 @@
                 </div>
 
                 <div class="detail-wrapper">
-                    <h4>Difficulty Level: </h4>
+                    <h4>Difficulty Level </h4>
                     <span> {{ cocktail.crafting_difficulty }}/5 </span>
                 </div>
 
                 <div class="detail-wrapper">
-                    <h4>Making Time: </h4>
+                    <h4>Making Time </h4>
                     <span> {{ cocktail.crafting_time }} min </span>
                 </div>
 
                 <div class="detail-wrapper">
-                    <h4>Alcoholic level: </h4>
+                    <h4>Alcoholic level </h4>
                     <span> {{ cocktail.alcoholic_level }}° </span>
                 </div>
 
                 <div class="detail-wrapper">
-                    <h4>Type: </h4>
+                    <h4>Type </h4>
                     <span> {{ cocktail.type }} </span>
                 </div>
 
                 <div class="detail-wrapper">
-                    <h4>Ice: </h4>
+                    <h4>Ice </h4>
                     <span> {{ cocktail.with_ice }} </span>
                 </div>
 
                 <div class="detail-wrapper">
-                    <h4>Glass Type: </h4>
+                    <h4>Glass Type </h4>
                     <span> {{ cocktail.glass_type }} </span>
                 </div>
 
                 <div class="detail-wrapper">
-                    <h4>Price: </h4>
+                    <h4>Price </h4>
                     <span> {{ cocktail.price }} &euro;</span>
                 </div>
 
