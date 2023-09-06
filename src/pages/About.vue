@@ -10,9 +10,9 @@
                 Who we are
             </h1>
             <p>
-                Welcome to [Your Brand Name], where the art of mixology meets unparalleled quality and taste. Founded in [Year], we have quickly become a cornerstone in the world of crafted cocktails, bringing a slice of elegance and a sprinkle of sophistication to bars and homes alike.
+                Welcome to Cocktail Club, where the art of mixology meets unparalleled quality and taste. Founded in 1266 BC, we have quickly become a cornerstone in the world of crafted cocktails, bringing a slice of elegance and a sprinkle of sophistication to bars and homes alike.
                 What started as a simple dream to elevate the everyday drink has transformed into a brand that’s synonymous with joy, celebration, and unforgettable moments. Our cocktails are not just beverages; they are an experience—carefully crafted to perfection, made only with the finest ingredients that we source from around the globe.
-                Here at [Your Brand Name], we believe in innovation and tradition, which is why we’re always exploring new ways to refine and enhance the cocktail experience, while staying true to its classic origins. Whether it’s a romantic date night, a casual get-together, or a grand celebration, our cocktails are designed to make every moment special.
+                Here at Cocktail Club, we believe in innovation and tradition, which is why we’re always exploring new ways to refine and enhance the cocktail experience, while staying true to its classic origins. Whether it’s a romantic date night, a casual get-together, or a grand celebration, our cocktails are designed to make every moment special.
             </p>
         </div>
         <div class="team">

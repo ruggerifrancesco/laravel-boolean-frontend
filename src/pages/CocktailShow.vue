@@ -49,7 +49,7 @@
 
                 <div class="detail-wrapper">
                     <h4>Ice </h4>
-                    <span> {{ cocktail.with_ice }} </span>
+                    <span v-if="cocktail.with_ice = 1 ? 'Yes' : 'No' "> {{ cocktail.with_ice }} </span>
                 </div>
 
                 <div class="detail-wrapper">
