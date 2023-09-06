@@ -215,7 +215,6 @@ const elements = [
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-
         }
     }
 
@@ -241,7 +240,7 @@ const elements = [
                     transition: color 0.3s ease;
 
                     &:hover {
-                        color: $text;
+                        color: $button-hover;
                     }
                 }
             }
@@ -272,6 +271,12 @@ const elements = [
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        &:hover {
+            color: $button-hover;
+            transform: scale(1.1);
+            filter: brightness(0) saturate(100%) invert(83%) sepia(28%) saturate(480%) hue-rotate(355deg) brightness(99%) contrast(91%);
         }
 
         p {
@@ -326,7 +331,7 @@ const elements = [
                     transition: background-color 0.3s ease;
 
                     &:hover {
-                        background-color: $button;
+                        background-color: $button-hover;
                     }
                 }
 
@@ -338,6 +343,10 @@ const elements = [
 
             .form-check-input:checked {
                 background-color: $button;
+            }
+
+            .form-check-label:hover {
+                color: $button-hover;
             }
         }
     }
