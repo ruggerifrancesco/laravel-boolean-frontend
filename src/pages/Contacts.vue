@@ -2,9 +2,12 @@
     <div class="contact-information-navbar">
 
         <!-- Contact Information Section -->
-
-        <!-- Title -->
-        <h2>Contact Information</h2>
+        <div class="jumbotron">
+            <h1>
+                <!-- Title -->
+                Contact Information
+            </h1>
+        </div>
 
         <!-- Navbar Buttons -->
         <nav>
@@ -188,17 +191,31 @@ const elements = [
 </script>
 
 <style lang="scss">
+@import "../styles/partials/variables.scss";
+
 .contact-information-navbar {
-    background-color: #f5f5f5;
-    padding: 20px;
+    background-color: $background-color;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 
-    h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
+    .jumbotron {
+        background-image: linear-gradient(rgba(200, 151, 151, 0.05), rgba(0, 0, 0, 0.80)), url(https://images.unsplash.com/photo-1597290282695-edc43d0e7129?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80);
+        width: 100%;
+        overflow: hidden;
+        height: 300px;
+        background-position: 45% 25%;
+        position: relative;
+
+        h1 {
+            font-size: 400;
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     nav {
@@ -223,7 +240,7 @@ const elements = [
                     transition: color 0.3s ease;
 
                     &:hover {
-                        color: #007bff;
+                        color: $button-hover;
                     }
                 }
             }
@@ -233,12 +250,10 @@ const elements = [
     .right-side {
         margin-top: 20px;
     }
-
-    .picture-wrapper {}
 }
 
 .contact-form {
-    background-color: #fff;
+    background-color: $background-color;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -258,6 +273,12 @@ const elements = [
             justify-content: center;
         }
 
+        &:hover {
+            color: $button-hover;
+            transform: scale(1.1);
+            filter: brightness(0) saturate(100%) invert(83%) sepia(28%) saturate(480%) hue-rotate(355deg) brightness(99%) contrast(91%);
+        }
+
         p {
             font-size: 14px;
             color: #777;
@@ -265,7 +286,7 @@ const elements = [
         }
 
         a {
-            color: #007bff;
+            color: $text;
             text-decoration: none;
         }
     }
@@ -281,6 +302,10 @@ const elements = [
         }
 
         form {
+            .form-control:focus{
+                box-shadow: 0 0 0 0.25rem rgb(241, 208, 145);
+            }
+
             .form-group {
                 margin-bottom: 15px;
 
@@ -295,12 +320,12 @@ const elements = [
 
                     &:focus {
                         outline: none;
-                        border-color: #007bff;
+                        border-color: $button;
                     }
                 }
 
                 input[type="submit"] {
-                    background-color: #007bff;
+                    background-color: $button;
                     color: #fff;
                     border: none;
                     border-radius: 5px;
@@ -310,14 +335,22 @@ const elements = [
                     transition: background-color 0.3s ease;
 
                     &:hover {
-                        background-color: #0056b3;
+                        background-color: $button-hover;
                     }
                 }
 
                 .submitting {
                     font-size: 14px;
-                    color: #777;
+                    color: $text;
                 }
+            }
+
+            .form-check-input:checked {
+                background-color: $button;
+            }
+
+            .form-check-label:hover {
+                color: $button-hover;
             }
         }
     }
