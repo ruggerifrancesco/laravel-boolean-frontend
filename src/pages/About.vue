@@ -1,7 +1,7 @@
 <template>
         <div class="jumbotron">
         <h1>
-            About-US
+            About US
         </h1>
     </div>
     <section class="about-index">
