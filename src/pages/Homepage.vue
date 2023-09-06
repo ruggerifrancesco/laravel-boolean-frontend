@@ -16,7 +16,6 @@
 <script>
 import axios from 'axios';
 import SingleCard from '../components/SingleCard.vue';
-import {store} from "../store.js";
 
 export default {
     name: 'Homepage',
