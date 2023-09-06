@@ -16,27 +16,25 @@
 <script>
 import axios from 'axios';
 import SingleCard from '../components/SingleCard.vue';
+import {store} from "../store.js";
 
 export default {
-    name: 'Homepage', 
-
+    name: 'Homepage',
     components:{
         SingleCard
     },
-
     data() {
         return {
+            store,
             cocktails: [],
-            apiUrl: 'http://127.0.0.1:8000/api/cocktails'
+            apiUrl: 'http://127.0.0.1:8000/api/cocktails',
         };
     },
 
     methods: {
         getCocktails() {
             const params = {}
-
             // console.log(params);
-
             axios.get(this.apiUrl, { params })
                 .then((response) => {
                 console.log(response.data.results.data);
@@ -49,11 +47,9 @@ export default {
             });
         }
     },
-
     created() {
         this.getCocktails();
-    },
-    
+    } 
 }
 </script>
 <style lang="scss" scoped>

@@ -18,17 +18,17 @@
                         </router-link>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn" type="submit">Search</button>
-                </form>
+                <!-- <div class="d-flex"> -->
+                    <!-- <input class="form-control me-2" type="search" placeholder="Search by type..." aria-label="Search"> -->
+                    <!-- <button class="btn" type="submit">Search</button> -->
+                <!-- </div> -->
             </div>
         </div>
     </nav>
 </template>
 <script>
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
 }
 </script>
 <style lang="scss" scoped>
