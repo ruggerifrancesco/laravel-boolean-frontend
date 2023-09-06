@@ -302,6 +302,10 @@ const elements = [
         }
 
         form {
+            .form-control:focus{
+                box-shadow: 0 0 0 0.25rem rgb(241, 208, 145);
+            }
+
             .form-group {
                 margin-bottom: 15px;
 
