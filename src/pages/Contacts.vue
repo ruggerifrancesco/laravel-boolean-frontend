@@ -235,8 +235,6 @@ const elements = [
     .right-side {
         margin-top: 20px;
     }
-
-    .picture-wrapper {}
 }
 
 .contact-form {
