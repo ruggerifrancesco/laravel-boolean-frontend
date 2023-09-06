@@ -2,9 +2,12 @@
     <div class="contact-information-navbar">
 
         <!-- Contact Information Section -->
-
-        <!-- Title -->
-        <h2>Contact Information</h2>
+        <div class="jumbotron">
+            <h1>
+                <!-- Title -->
+                Contact Information
+            </h1>
+        </div>
 
         <!-- Navbar Buttons -->
         <nav>
@@ -192,15 +195,28 @@ const elements = [
 
 .contact-information-navbar {
     background-color: $background-color;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 
-    h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
+    .jumbotron {
+        background-image: linear-gradient(rgba(200, 151, 151, 0.05), rgba(0, 0, 0, 0.80)), url(https://images.unsplash.com/photo-1597290282695-edc43d0e7129?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80);
+        width: 100%;
+        overflow: hidden;
+        height: 300px;
+        background-position: 45% 25%;
+        position: relative;
+
+        h1 {
+            font-size: 400;
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
     }
 
     nav {
